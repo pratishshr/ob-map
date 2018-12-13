@@ -1,0 +1,44 @@
+{
+  "name": "ob-map",
+  "version": "1.0.0",
+  "description": "Simple object to object mapping.",
+  "main": "build/lib.js",
+  "module": "src/index.js",
+  "author": "Pratish Shrestha <pratishshr@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "webpack",
+    "test": "mocha test/**/*.spec.js --require ignore-styles --require @babel/polyfill --require @babel/register --require jsdom-global/register --recursive",
+    "test:watch": "mocha test/**/*.spec.js --require ignore-styles --require @babel/polyfill --require @babel/register --require jsdom-global/register --recursive --watch"
+  },
+  "keywords": [
+    "object mapper",
+    "map objects"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pratishshr/ob-map"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "chai": "^4.1.2",
+    "css-loader": "^2.0.0",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "12.2.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "^5.2.0",
+    "mock-local-storage": "^1.1.7",
+    "sinon": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.2.0"
+  }
+}
