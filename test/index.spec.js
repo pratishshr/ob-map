@@ -41,6 +41,28 @@ describe('map', () => {
     });
   });
 
+  it('should map data if nested path given', () => {
+    const input = {
+      a: {
+        b: {
+          c: 1
+        }
+      },
+      d: {
+        e: 2
+      }
+    };
+    const mapping = {
+      x: 'a.b.c',
+      y: 'd.e'
+    };
+
+    expect(map(input, mapping)).to.eql({
+      x: 1,
+      y: 2
+    });
+  });
+
   it('should throw an error if input object is null', () => {
     expect(() => map(null, {})).to.throw(Error);
   });

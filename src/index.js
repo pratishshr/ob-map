@@ -6,6 +6,16 @@ function isObject(obj) {
   return false;
 }
 
+function get(obj, selector, defaultValue = null) {
+  const path = !Array.isArray(selector) ? selector.split('.').filter(p => p) : selector;
+
+  if (!path.length) {
+    return obj === undefined ? defaultValue : obj;
+  }
+
+  return get(obj[path.shift()], path, defaultValue);
+}
+
 /**
  * Map object from one key to another
  *
@@ -24,7 +34,7 @@ export default function map(obj, mapping) {
   let mappedObject = {};
 
   for (let [key, value] of Object.entries(mapping)) {
-    mappedObject[key] = obj[value] || null;
+    mappedObject[key] = get(obj, value);
   }
 
   return mappedObject;
