@@ -47,21 +47,22 @@ map(
 ```js
 import map from 'ob-map';
 
-map(
-  {
-    a: {
-      b: {
-        c: 1
-      }
-    },
-    d: {
-      e: 2
+const obj = {
+  a: {
+    b: {
+      c: 1
     }
   },
-  {
-    x: 'a.b.c',
-    y: 'd.e'
+  d: {
+    e: 2
   }
-);
+};
+
+const mapping = {
+  x: 'a.b.c',
+  y: 'd.e'
+};
+
+map(obj, mapping);
 // => {x: 1, y: 2}
 ```
