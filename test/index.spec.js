@@ -1,5 +1,3 @@
-// Sample Tests
-
 import { expect } from 'chai';
 
 import map from '../src';
