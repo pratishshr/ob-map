@@ -1,8 +1,8 @@
-# o-map
+# omap
 
-[![npm](https://img.shields.io/npm/v/o-map.svg)](https://www.npmjs.com/package/o-map)
-[![Build Status](https://travis-ci.org/pratishshr/o-map.svg?branch=master)](https://travis-ci.org/pratishshr/o-map)
-[![npm](https://img.shields.io/npm/dt/o-map.svg)](https://www.npmjs.com/package/o-map)
+[![npm](https://img.shields.io/npm/v/omap.svg)](https://www.npmjs.com/package/omap)
+[![Build Status](https://travis-ci.org/pratishshr/omap.svg?branch=master)](https://travis-ci.org/pratishshr/omap)
+[![npm](https://img.shields.io/npm/dt/omap.svg)](https://www.npmjs.com/package/omap)
 
 > Simple object mapper for creating flat javascript objects.
 
@@ -17,13 +17,13 @@ Supports mapping of a nested object to a flat structure.
 ### npm
 
 ```bash
-npm install --save o-map
+npm install --save omap
 ```
 
 ### yarn
 
 ```bash
-yarn add o-map
+yarn add omap
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ yarn add o-map
 ### Flat Structure
 
 ```js
-import map from 'o-map';
+import map from 'omap';
 
 map(
   {
@@ -49,7 +49,7 @@ map(
 ### Nested Structure
 
 ```js
-import map from 'o-map';
+import map from 'omap';
 
 const obj = {
   a: {

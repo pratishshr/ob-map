@@ -1,5 +1,5 @@
 {
-  "name": "o-map",
+  "name": "omap",
   "version": "0.1.0",
   "description": "Simple object to object mapping.",
   "main": "build/lib.js",
