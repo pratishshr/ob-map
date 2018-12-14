@@ -16,9 +16,12 @@ npm install --save ob-map
 yarn add ob-map
 ```
 
-Map object keys from one key to another with the help of a mapping.
+Map object keys from one key to another with the help of a mapping object.
+Supports mapping for nested object as well.
 
 ## Usage
+
+### Flat Structure
 
 ```js
 import map from 'ob-map';
@@ -34,4 +37,28 @@ map(
   }
 );
 // => {y: 1, z: 2}
+```
+
+### Nested Structure
+
+```js
+import map from 'ob-map';
+
+map(
+  {
+    a: {
+      b: {
+        c: 1
+      }
+    },
+    d: {
+      e: 2
+    }
+  },
+  {
+    x: 'a.b.c',
+    y: 'd.e'
+  }
+);
+// => {x: 1, y: 2}
 ```
