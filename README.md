@@ -4,7 +4,13 @@
 [![Build Status](https://travis-ci.org/pratishshr/ob-map.svg?branch=master)](https://travis-ci.org/pratishshr/ob-map)
 [![npm](https://img.shields.io/npm/dt/ob-map.svg)](https://www.npmjs.com/package/ob-map)
 
-> Simple object mapper.
+> Simple object mapper for creating flat javascript objects.
+
+## Description
+
+Maps an object to a flat structure.
+Map object keys from one key to another with the help of a mapping object.
+Supports mapping of a nested object to a flat structure.
 
 ## Installation
 
@@ -15,9 +21,6 @@ npm install --save ob-map
 ```bash
 yarn add ob-map
 ```
-
-Map object keys from one key to another with the help of a mapping object.
-Supports mapping for nested object as well.
 
 ## Usage
 
