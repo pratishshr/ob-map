@@ -14,9 +14,13 @@ Supports mapping of a nested object to a flat structure.
 
 ## Installation
 
+### npm
+
 ```bash
 npm install --save ob-map
 ```
+
+### yarn
 
 ```bash
 yarn add ob-map
