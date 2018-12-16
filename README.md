@@ -31,7 +31,7 @@ yarn add ob-map
 ### Flat Structure
 
 ```js
-import map from 'ob-map';
+import { map } from 'ob-map';
 
 map(
   {
@@ -49,7 +49,7 @@ map(
 ### Nested Structure
 
 ```js
-import map from 'ob-map';
+import { map } from 'ob-map';
 
 const obj = {
   a: {
@@ -69,4 +69,32 @@ const mapping = {
 
 map(obj, mapping);
 // => {x: 1, y: 2}
+```
+
+### Bulk Map
+
+```js
+import { bulkMap } from 'ob-map';
+
+const arr = [
+  {
+    a: 1,
+    b: 2,
+    c: 3
+  },
+  {
+    a: 3,
+    b: 4,
+    c: 5
+  }
+];
+
+const mapping = {
+  x: 'a',
+  y: 'b',
+  z: 'c'
+};
+
+bulkMap(arr, mapping);
+// => [{ x: 1, y: 2, z: 3 },{ x: 3, y: 4, z: 5 }]
 ```

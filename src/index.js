@@ -17,12 +17,12 @@ function get(obj, selector, defaultValue = null) {
 }
 
 /**
- * Map object from one key to another
+ * Map object from one key to another.
  *
  * @param {object} obj
  * @param {object} mapping
  */
-export default function map(obj, mapping) {
+export function map(obj, mapping) {
   if (!isObject(obj)) {
     throw new Error(`Unsupported type '${obj !== null ? typeof obj : null}' passed as an input.`);
   }
@@ -38,4 +38,18 @@ export default function map(obj, mapping) {
   }
 
   return mappedObject;
+}
+
+/**
+ * Bulk Map object from one key to another.
+ *
+ * @param {object} obj
+ * @param {object} mapping
+ */
+export function bulkMap(arr, mapping) {
+  if (!Array.isArray(arr)) {
+    throw new Error(`Expected Array but '${typeof arr}' was passed`);
+  }
+
+  return arr.map(a => map(a, mapping));
 }
